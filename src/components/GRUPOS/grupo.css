@@ -1,0 +1,124 @@
+.modal-content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 500px;
+        padding: 40px;
+        transform: translate(-50%, -50%);
+        background: #141e30;
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0,0,0,.6);
+        border-radius: 10px;
+        color: white;
+}
+
+.modal-content input {
+        width: 100%;
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        background: transparent;
+}
+
+.modal-content select {
+        width: 100%;
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        background: transparent;
+}
+
+.modal-content select option{
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+        background: #141e30;
+}
+
+.modalInfo .modal-content{
+        width: 600px !important;
+}
+
+.containerTableGrup{
+        width: 80%;
+        box-shadow: 0 15px 25px rgba(0,0,0,.6);
+        border-radius: 10px;
+}
+
+.Container{
+        display: flex;
+}
+
+.navvertical {
+        height: 100%;
+        text-align: center;
+        padding: 2% 1%;
+        width: 20%;
+        margin-left: 5%;
+        background: #141e30;  
+        display: inline-block;
+        border-radius: 35px;
+        position: relative;
+        box-shadow: 0 15px 25px rgba(0,0,0,.6);
+}
+
+.navvertical ul {
+        display: flex;
+        list-style-type: none;  
+}
+.navvertical ul hr{
+        color: #000000;
+        opacity: 1;
+}
+
+.navvertical ul {
+        flex-direction: column;
+        padding: 0;
+}
+
+.navvertical ul li a{
+        text-decoration: none;
+        display: inline-block;
+        padding: 15px;
+        color: #fff !important;
+        transition: transform 0.3s cubic-bezier(0.925, 0.150, 0.505, 1.030);
+}
+
+.navvertical ul li a:hover{
+        transform: scale(1.3);
+}
+
+.navvertical::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        border-radius: 35px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: scaleX(1.0);
+        z-index: -1;
+        transition: all 0.3s cubic-bezier(0.925, 0.150, 0.505, 1.030);
+}
+
+.navvertical.horizontal:hover::after {
+        transform: scaleX(1.1);
+}
+
+.navvertical.vertical:hover::after {
+        transform: scaleY(1.1); 
+}       
+
+@media (max-width: 900px) {
+        .Container {
+                flex-direction: column;
+                align-items: center;
+        }
+}
